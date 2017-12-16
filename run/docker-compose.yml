@@ -1,0 +1,8 @@
+PatientCard_DB:
+  image: postgres:9.4
+  ports:
+    - "5435:5432"
+  environment:
+    POSTGRES_PASSWORD: 123456
+    POSTGRES_USER: patientcard
+    POSTGRES_DB: patientcard
