@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/observation")
-class ObservationController(val observationRepository: RecommendationRepository) {
+@RequestMapping("/recommendation")
+class RecommendationController(val recommendationRepository: RecommendationRepository) {
 
     @GetMapping("/findByPatientId")
     fun findByPatientId(patientId: Long)
-            = observationRepository.findByPatientId(patientId)
+            = recommendationRepository.findByPatientId(patientId)
 
 }

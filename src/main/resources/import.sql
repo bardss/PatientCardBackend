@@ -21,3 +21,11 @@ INSERT INTO "observationdto" (id, patient_id, date, note, time) VALUES (5, 1, '2
 INSERT INTO "observationdto" (id, patient_id, date, note, time) VALUES (6, 1, '2018-08-04', 'Lorem ipsum 7', '20:00:00');
 INSERT INTO "observationdto" (id, patient_id, date, note, time) VALUES (7, 1, '2018-08-04', 'Lorem ipsum 8', '20:10:00');
 INSERT INTO "observationdto" (id, patient_id, date, note, time) VALUES (8, 1, '2018-08-04', 'Lorem ipsum 9', '20:20:00');
+
+INSERT INTO "recommendationdto" (id, patient_id, date, description, morning, noon, evening, night) VALUES (0, 1, '2018-08-04', 'Lorem ipsum 1', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
+INSERT INTO "recommendationdto" (id, patient_id, date, description, morning, noon, evening, night) VALUES (1, 1, '2018-08-05', 'Lorem ipsum 2', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
+INSERT INTO "recommendationdto" (id, patient_id, date, description, morning, noon, evening, night) VALUES (2, 1, '2018-08-06', 'Lorem ipsum 3', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
+INSERT INTO "recommendationdto" (id, patient_id, date, description, morning, noon, evening, night) VALUES (3, 1, '2018-08-07', 'Lorem ipsum 4', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
+INSERT INTO "recommendationdto" (id, patient_id, date, description, morning, noon, evening, night) VALUES (4, 1, '2018-08-08', 'Lorem ipsum 5', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
+INSERT INTO "recommendationdto" (id, patient_id, date, description, morning, noon, evening, night) VALUES (5, 1, '2018-08-09', 'Lorem ipsum 6', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
+INSERT INTO "recommendationdto" (id, patient_id, date, description, morning, noon, evening, night) VALUES (6, 1, '2018-08-10', 'Lorem ipsum 7', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
