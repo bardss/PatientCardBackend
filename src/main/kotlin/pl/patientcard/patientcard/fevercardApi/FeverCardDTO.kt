@@ -1,10 +1,9 @@
 package pl.patientcard.patientcard.fevercardApi
 
+import com.rsqtechnologies.health.infrastructure.converters.LocalDateAttributeConverter
+import pl.patientcard.patientcard.enum.TimeOfDay
 import java.time.LocalDate
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 data class FeverCardDTO(
@@ -12,7 +11,8 @@ data class FeverCardDTO(
         @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long = 0,
         val patientId: Long = 0,
+        @Convert(converter = LocalDateAttributeConverter::class)
         val date: LocalDate = LocalDate.now(),
-        val timeOfDay: String = "",
-        val pulse: Float = 0F,
-        val temperature: Float = 0F)
+        val timeOfDay: TimeOfDay = TimeOfDay.MORNING,
+        val pulse: Int = 0,
+        val temperature: Int = 0)

@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository
 @Repository
 interface PatientRepository : PagingAndSortingRepository<PatientDTO, Long> {
 
-    fun findByPatientCode(@Param("qr") patientCode: String): List<PatientDTO>
+    fun findByQrCode(@Param("qr") qrCode: String): PatientDTO
 
 }

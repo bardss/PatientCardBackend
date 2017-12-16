@@ -11,6 +11,8 @@ data class PatientDTO(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long = 0,
-        val patientCode: String = "",
         val name: String = "",
-        val surname: String = "")
+        val surname: String = "",
+        val patientCode: String = "",
+        val qrCode: String = ""
+)

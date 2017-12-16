@@ -10,6 +10,6 @@ class PatientController(val patientRepository: PatientRepository) {
 
     @GetMapping("/findByQr")
     fun findByQr(qr: String)
-            = patientRepository.findByPatientCode(qr)
+            = patientRepository.findByQrCode(qr)
 
 }
