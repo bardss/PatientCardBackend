@@ -1,7 +1,7 @@
-INSERT INTO "patientdto" (id, name, surname, patient_code, qr_code) VALUES (1, 'Jakub', 'Aniola', '95071656524', 122075);
-INSERT INTO "patientdto" (id, name, surname, patient_code, qr_code) VALUES (2, 'Milan', 'Sawicki', '87073052828', 122076);
-INSERT INTO "patientdto" (id, name, surname, patient_code, qr_code) VALUES (3, 'Fabian', 'Grzes', '62040534871', 122077);
-INSERT INTO "patientdto" (id, name, surname, patient_code, qr_code) VALUES (4, 'Julia', 'Kot', '58072179546', 122078);
+INSERT INTO "patientdto" (name, surname, patient_code, qr_code) VALUES ('Jakub', 'Aniola', '95071656524', 122075);
+INSERT INTO "patientdto" (name, surname, patient_code, qr_code) VALUES ('Milan', 'Sawicki', '87073052828', 122076);
+INSERT INTO "patientdto" (name, surname, patient_code, qr_code) VALUES ('Fabian', 'Grzes', '62040534871', 122077);
+INSERT INTO "patientdto" (name, surname, patient_code, qr_code) VALUES ('Julia', 'Kot', '58072179546', 122078);
 
 INSERT INTO "fever_carddto" (id, patient_id, date, time_of_day, pulse, temperature) VALUES (0, 1, '2018-08-01', 0, 120.0, 36.0);
 INSERT INTO "fever_carddto" (id, patient_id, date, time_of_day, pulse, temperature) VALUES (1, 1, '2018-08-01', 2, 121.0, 35.0);

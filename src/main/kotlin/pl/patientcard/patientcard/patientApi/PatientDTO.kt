@@ -9,10 +9,10 @@ import javax.persistence.Id
 @Entity
 data class PatientDTO(
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
-        val id: Long = 0,
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        val id: Long? = null,
         val name: String = "",
         val surname: String = "",
         val patientCode: String = "",
-        val qrCode: String = ""
+        val qrCode: String? = null
 )

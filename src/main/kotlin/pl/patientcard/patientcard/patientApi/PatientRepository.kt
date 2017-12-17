@@ -9,4 +9,5 @@ interface PatientRepository : PagingAndSortingRepository<PatientDTO, Long> {
 
     fun findByQrCode(@Param("qr") qrCode: String): PatientDTO
 
+
 }
