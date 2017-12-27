@@ -9,7 +9,7 @@ import javax.persistence.*
 @Entity
 data class ObservationDTO(
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0,
         val patientId: Long = 0,
         @Convert(converter = LocalDateAttributeConverter::class)
