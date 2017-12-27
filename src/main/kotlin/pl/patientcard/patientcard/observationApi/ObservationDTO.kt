@@ -1,9 +1,7 @@
 package pl.patientcard.patientcard.observationApi
 
-import com.rsqtechnologies.health.infrastructure.converters.LocalDateAttributeConverter
-import com.rsqtechnologies.health.infrastructure.converters.LocalTimeAttributeConverter
-import java.time.LocalDate
-import java.time.LocalTime
+import com.rsqtechnologies.health.infrastructure.converters.LocalDateTimeAttributeConverter
+import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
@@ -12,8 +10,8 @@ data class ObservationDTO(
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0,
         val patientId: Long = 0,
-        @Convert(converter = LocalDateAttributeConverter::class)
-        val date: LocalDate = LocalDate.now(),
-        val note: String = "",
-        @Convert(converter = LocalTimeAttributeConverter::class)
-        val time: LocalTime = LocalTime.now())
+        val employee: String = "",
+        @Convert(converter = LocalDateTimeAttributeConverter::class)
+        val dateTime: LocalDateTime = LocalDateTime.now(),
+        val note: String = ""
+)

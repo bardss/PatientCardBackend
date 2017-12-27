@@ -7,6 +7,7 @@ import javax.persistence.Converter
 
 @Converter(autoApply = true)
 class LocalTimeAttributeConverter : AttributeConverter<LocalTime, Time> {
+
     override fun convertToDatabaseColumn(localTime: LocalTime?): Time? {
         return if (localTime == null) null else Time.valueOf(localTime)
     }

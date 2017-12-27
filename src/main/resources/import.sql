@@ -12,15 +12,15 @@ INSERT INTO "fever_carddto" (patient_id, date, time_of_day, pulse, temperature) 
 INSERT INTO "fever_carddto" (patient_id, date, time_of_day, pulse, temperature) VALUES (1, '2018-08-04', 0, 125.0, 37.2);
 INSERT INTO "fever_carddto" (patient_id, date, time_of_day, pulse, temperature) VALUES (1, '2018-08-04', 2, 125.0, 36.4);
 
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 1', '19:00:00');
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 2', '19:10:00');
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 3', '19:20:00');
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 4', '19:30:00');
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 5', '19:40:00');
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 6', '19:50:00');
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 7', '20:00:00');
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 8', '20:10:00');
-INSERT INTO "observationdto" (patient_id, date, note, time) VALUES (1, '2018-08-04', 'Lorem ipsum 9', '20:20:00');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Robert Warian', '2018-08-04 19:00:00.000000', 'Lorem ipsum 1');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Robert Polska', '2018-08-04 19:20:00.000000', 'Lorem ipsum 2');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Piotr Burneika', '2018-08-04 19:40:00.000000', 'Lorem ipsum 3');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Robert Koźlak', '2018-08-04 19:50:00.000000', 'Lorem ipsum 4');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Jakub Babiarz', '2018-08-04 19:55:00.000000', 'Lorem ipsum 5');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Roman Babiarz', '2018-08-04 19:56:00.000000', 'Lorem ipsum 6');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Robert Anioła', '2018-08-04 19:57:00.000000', 'Lorem ipsum 7');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Piotr Anioła', '2018-08-04 20:00:00.000000', 'Lorem ipsum 8');
+INSERT INTO "observationdto" (patient_id, employee, date_time, note) VALUES (1, 'Robert Anioła', '2018-08-04 21:00:00.000000', 'Lorem ipsum 9');
 
 INSERT INTO "recommendationdto" (patient_id, date, description, morning, noon, evening, night) VALUES (1, '2018-08-04', 'Lorem ipsum 1', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
 INSERT INTO "recommendationdto" (patient_id, date, description, morning, noon, evening, night) VALUES (1, '2018-08-05', 'Lorem ipsum 2', '08:20:00', '12:20:00', '18:20:00', '23:20:00');
