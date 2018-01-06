@@ -14,4 +14,12 @@ class ObservationController(val observationRepository: ObservationRepository) {
     fun saveObservation(@RequestBody observation: ObservationDTO): ObservationDTO?
             = observationRepository.save(observation)
 
+    @DeleteMapping("/deleteObservation")
+    fun deleteObservation(@RequestParam observationId: Long)
+            = observationRepository.delete(observationId)
+
+    @PutMapping("/editObservation")
+    fun editObservation(@RequestBody observation: ObservationDTO): ObservationDTO?
+            = observationRepository.save(observation)
+
 }

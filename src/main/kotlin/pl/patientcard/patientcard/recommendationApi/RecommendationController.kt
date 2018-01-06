@@ -15,4 +15,12 @@ class RecommendationController(val recommendationRepository: RecommendationRepos
     fun saveObservation(@RequestBody recommendation: RecommendationDTO): RecommendationDTO?
             = recommendationRepository.save(recommendation)
 
+    @DeleteMapping("/deleteRecommendation")
+    fun deleteObservation(@RequestParam recommendationId: Long)
+            = recommendationRepository.delete(recommendationId)
+
+    @PutMapping("/editRecommendation")
+    fun editObservation(@RequestBody recommendation: RecommendationDTO): RecommendationDTO?
+            = recommendationRepository.save(recommendation)
+
 }

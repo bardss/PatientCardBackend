@@ -11,7 +11,14 @@ class FeverCardController(val feverCardRepository: FeverCardRepository) {
             = feverCardRepository.findByPatientId(patientId)
 
     @PostMapping("/saveFeverCard")
-    fun saveObservation(@RequestBody feverCard: FeverCardDTO): FeverCardDTO?
+    fun saveFeverCard(@RequestBody feverCard: FeverCardDTO): FeverCardDTO?
             = feverCardRepository.save(feverCard)
 
+    @DeleteMapping("/deleteFeverCard")
+    fun deleteFeverCard(@RequestParam feverCardId: Long)
+            = feverCardRepository.delete(feverCardId)
+
+    @PutMapping("/editFeverCard")
+    fun editFeverCard(@RequestBody feverCard: FeverCardDTO): FeverCardDTO?
+            = feverCardRepository.save(feverCard)
 }
