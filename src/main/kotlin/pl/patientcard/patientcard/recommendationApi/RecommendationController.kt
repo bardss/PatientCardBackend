@@ -12,15 +12,15 @@ class RecommendationController(val recommendationRepository: RecommendationRepos
             = recommendationRepository.findByPatientId(patientId)
 
     @PostMapping("/saveRecommendation")
-    fun saveObservation(@RequestBody recommendation: RecommendationDTO): RecommendationDTO?
+    fun saveRecommendation(@RequestBody recommendation: RecommendationDTO): RecommendationDTO?
             = recommendationRepository.save(recommendation)
 
     @DeleteMapping("/deleteRecommendation")
-    fun deleteObservation(@RequestParam recommendationId: Long)
+    fun deleteRecommendation(@RequestParam recommendationId: Long)
             = recommendationRepository.delete(recommendationId)
 
     @PutMapping("/editRecommendation")
-    fun editObservation(@RequestBody recommendation: RecommendationDTO): RecommendationDTO?
+    fun editRecommendation(@RequestBody recommendation: RecommendationDTO): RecommendationDTO?
             = recommendationRepository.save(recommendation)
 
 }
