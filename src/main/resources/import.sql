@@ -1,3 +1,6 @@
+INSERT INTO "doctordto" (id, email_address, name, surname, password) VALUES (0, 'test@test.pl', 'Jakub', 'Aniola', 'Test12345');
+INSERT INTO "doctordto" (id, email_address, name, surname, password) VALUES (1, 'test2@test.pl', 'Jakub2', 'Aniola2', 'Test12345');
+
 INSERT INTO "patientdto" (name, surname, patient_code, qr_code) VALUES ('Jakub', 'Aniola', '95071656524', 122075);
 INSERT INTO "patientdto" (name, surname, patient_code, qr_code) VALUES ('Milan', 'Sawicki', '87073052828', 122076);
 INSERT INTO "patientdto" (name, surname, patient_code, qr_code) VALUES ('Fabian', 'Grzes', '62040534871', 122077);

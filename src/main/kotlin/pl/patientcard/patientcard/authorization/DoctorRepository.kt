@@ -1,8 +1,8 @@
 package oauth
 
 import org.springframework.data.jpa.repository.JpaRepository
-import pl.patientcard.patientcard.DoctorApi.Doctor
+import pl.patientcard.patientcard.DoctorApi.DoctorDTO
 
-interface DoctorRepository: JpaRepository<Doctor, Int> {
-    fun findByEmailAddressIgnoreCase(emailAddress: String): Doctor?
+interface DoctorRepository: JpaRepository<DoctorDTO, Int> {
+    fun findByEmailAddressIgnoreCase(emailAddress: String): DoctorDTO?
 }

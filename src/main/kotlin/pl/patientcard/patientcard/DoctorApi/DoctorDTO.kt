@@ -1,10 +1,13 @@
 package pl.patientcard.patientcard.DoctorApi
+
 import java.io.Serializable
-import javax.persistence.*
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
 
 @Entity
-@Table(name = "[doctor]")
-data class Doctor(
+data class DoctorDTO(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Int? = null,
@@ -13,5 +16,4 @@ data class Doctor(
         var surname: String,
         val password: String
 
-) : Serializable {
-}
+) : Serializable
