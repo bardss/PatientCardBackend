@@ -6,7 +6,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer
 import org.springframework.security.oauth2.provider.token.TokenStore
-import pl.patientcard.patientcard.Paths
 import javax.servlet.http.HttpServletResponse
 
 //@Profile("!test")
@@ -25,15 +24,6 @@ class ResourceServer : ResourceServerConfigurerAdapter() {
                 .authenticationEntryPoint { _, response, _ -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED) }
                 .and()
                 .authorizeRequests()
-                .antMatchers(
-                        "/v2/api-docs",
-                        "/configuration/ui",
-                        "/swagger-resources/**",
-                        "/configuration/**",
-                        "/swagger-ui.html",
-                        "/webjars/**",
-                        "${Paths.PASSWORD_PATH}/**"
-                ).permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
                 .httpBasic().disable()
@@ -42,6 +32,6 @@ class ResourceServer : ResourceServerConfigurerAdapter() {
     override fun configure(resources: ResourceServerSecurityConfigurer?) {
         resources!!
                 .tokenStore(tokenStore)
-                .resourceId("gpsTracker")
+                .resourceId("patientCard")
     }
 }

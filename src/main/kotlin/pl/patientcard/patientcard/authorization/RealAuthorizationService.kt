@@ -1,11 +1,11 @@
 
 import no.nowak.core.infrastructure.security.authorizationService.AuthorizationService
-import oauth.DoctorRepository
 import org.springframework.context.annotation.Profile
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.stereotype.Service
 import pl.patientcard.patientcard.DoctorApi.DoctorDTO
+import pl.patientcard.patientcard.DoctorApi.DoctorRepository
 
 @Service("authorizationService")
 @Profile("authorizationService")
