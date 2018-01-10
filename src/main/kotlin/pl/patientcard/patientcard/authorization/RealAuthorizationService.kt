@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service
 import pl.patientcard.patientcard.DoctorApi.Doctor
 
 @Service("authorizationService")
-@Profile(AuthorizationService)
+@Profile("authorizationService")
 class RealAuthorizationService(val doctorRepository: DoctorRepository) : AuthorizationService {
 
     override fun getCurrentUser(): Doctor {
