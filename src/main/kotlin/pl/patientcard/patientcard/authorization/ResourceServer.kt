@@ -1,6 +1,3 @@
-package no.nowak.core.infrastructure.security
-
-
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Profile
@@ -9,7 +6,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer
 import org.springframework.security.oauth2.provider.token.TokenStore
-import java.nio.file.Paths
+import pl.patientcard.patientcard.Paths
 import javax.servlet.http.HttpServletResponse
 
 @Profile("!test")
@@ -35,9 +32,7 @@ class ResourceServer : ResourceServerConfigurerAdapter() {
                         "/configuration/**",
                         "/swagger-ui.html",
                         "/webjars/**",
-                        "${Paths.USER_PATH}${UserApi.REGISTER_PATH}/**",
-                        "${Paths.PASSWORD_PATH}/**",
-                        "${Paths.GPS_PATH}${Paths.MEASUREMENTS_PATH}/**"
+                        "${Paths.PASSWORD_PATH}/**"
                 ).permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
