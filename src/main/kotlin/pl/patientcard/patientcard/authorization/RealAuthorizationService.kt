@@ -1,5 +1,6 @@
+package pl.patientcard.patientcard.authorization
 
-import no.nowak.core.infrastructure.security.authorizationService.AuthorizationService
+import pl.patientcard.patientcard.authorization.AuthorizationService
 import org.springframework.context.annotation.Profile
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.security.core.userdetails.UsernameNotFoundException

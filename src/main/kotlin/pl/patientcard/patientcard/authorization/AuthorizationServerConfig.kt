@@ -1,4 +1,4 @@
-package no.nowak.core.infrastructure.security
+package pl.patientcard.patientcard.authorization
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
@@ -17,6 +17,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory
 import java.util.*
+
 
 
 //@Profile("!test")
@@ -44,7 +45,7 @@ class AuthorizationServerConfig : AuthorizationServerConfigurerAdapter() {
     @Bean
     fun tokenEnhancer(): JwtAccessTokenConverter {
         val keyStoreKeyFactor = KeyStoreKeyFactory(ClassPathResource("jwtOD.jks"), "aqSWdeFR".toCharArray())
-        val jwtAccessTokenConverter = CustomTokenEnhancer();
+        val jwtAccessTokenConverter = CustomTokenEnhancer()
         jwtAccessTokenConverter.setKeyPair(keyStoreKeyFactor.getKeyPair("jwtOD"))
         return jwtAccessTokenConverter
     }
@@ -60,6 +61,7 @@ class AuthorizationServerConfig : AuthorizationServerConfigurerAdapter() {
         override fun enhance(accessToken: OAuth2AccessToken, authentication: OAuth2Authentication): OAuth2AccessToken {
 
             val additionalInfo = LinkedHashMap(accessToken.additionalInformation)
+
             val customAccessToken = DefaultOAuth2AccessToken(accessToken)
             customAccessToken.additionalInformation = additionalInfo
             return super.enhance(customAccessToken, authentication)

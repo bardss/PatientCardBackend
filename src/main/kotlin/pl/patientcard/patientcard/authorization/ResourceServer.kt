@@ -1,3 +1,4 @@
+package pl.patientcard.patientcard.authorization
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Configuration
@@ -24,6 +25,14 @@ class ResourceServer : ResourceServerConfigurerAdapter() {
                 .authenticationEntryPoint { _, response, _ -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED) }
                 .and()
                 .authorizeRequests()
+                .antMatchers(
+                        "/v2/api-docs",
+                        "/configuration/ui",
+                        "/swagger-resources/**",
+                        "/configuration/**",
+                        "/swagger-ui.html",
+                        "/webjars/**"
+                ).permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
                 .httpBasic().disable()

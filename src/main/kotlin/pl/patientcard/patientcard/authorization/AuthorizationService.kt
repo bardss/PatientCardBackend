@@ -1,4 +1,4 @@
-package no.nowak.core.infrastructure.security.authorizationService
+package pl.patientcard.patientcard.authorization
 
 import pl.patientcard.patientcard.DoctorApi.DoctorDTO
 

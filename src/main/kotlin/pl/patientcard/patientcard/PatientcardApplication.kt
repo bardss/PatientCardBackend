@@ -16,12 +16,12 @@ import org.springframework.security.crypto.password.PasswordEncoder
 class PatientcardApplication{
 
     @Autowired
-    lateinit var doctorDetailsService: UserDetailsService
+    lateinit var userDetailsService: UserDetailsService
 
     @Autowired
     @Throws(Exception::class)
     fun authenticationManager(builder: AuthenticationManagerBuilder) {
-        builder.userDetailsService(doctorDetailsService)
+        builder.userDetailsService(userDetailsService)
     }
 }
 

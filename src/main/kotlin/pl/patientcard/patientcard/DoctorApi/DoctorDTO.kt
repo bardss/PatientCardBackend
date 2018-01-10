@@ -11,9 +11,9 @@ data class DoctorDTO(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Int? = null,
-        var emailAddress: String,
-        var name: String,
-        var surname: String,
-        val password: String
+        var emailAddress: String = "",
+        var name: String = "",
+        var surname: String = "",
+        val password: String = ""
 
 ) : Serializable
